@@ -14,6 +14,7 @@ const install = function (_Vue) {
                 console.log('根组件',this.$options.name)
                 this._routerRoot = this
                 this._router = this.$options.router
+                this._router.init(this)
             }else{
                 this._routerRoot = this.$parent && this.$parent._routerRoot
                 console.log('儿子',this.$options.name)
