@@ -1,5 +1,8 @@
 module.exports = {
     devServer:{
-        overlay:false
+        overlay: {
+            warnings: false,
+            errors: false
+        }
     }
 }

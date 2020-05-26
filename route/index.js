@@ -1,4 +1,4 @@
-import VueRouter from "vue-router";
+import VueRouter from "../vue-router";
 import Vue from 'vue'
 import Home from '../view/home'
 import About from '../view/about'
