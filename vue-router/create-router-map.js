@@ -9,12 +9,21 @@ export default function createRouterMap( routes, oldList=[], oldMap={}){
         pathList,pathMap
     }
 }
-function addRouteRecord(router, pathList, pathMap){
-    let path = router.path;
+function addRouteRecord(router, pathList, pathMap,parentRecord){
+    let path = parentRecord?`${parentRecord.path}/${router.path}`:router.path;
     let record = {
         path,
-        component:router.component
+        component:router.component,
+        parent:parentRecord
     }
-    pathMap[path] = record
-    //pathList.push
+    if(!pathMap[path] ){
+        // 防止路有重复的, 不许覆盖,直接用于原来的
+        pathMap[path] = record
+        pathList.push(path)
+    }
+    if(router.children){
+        router.children.forEach(r=>{
+            addRouteRecord(r,pathList,pathMap)
+        })
+    }
 }

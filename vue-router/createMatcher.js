@@ -2,6 +2,7 @@ import createRouteMap from './create-router-map.js'
 export default function createMatcher(routes) {
     console.log(routes,"createMatcher")
     let {pathList,pathMap}  = createRouteMap(routes)
+    console.log(pathList,pathMap,'pathList')
     function match(url) {
         let component =   pathMap.includes(url) && pathMap(url)
         return component ?component :void 0
