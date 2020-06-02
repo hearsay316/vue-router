@@ -1,5 +1,5 @@
 import install from "./install";
-import createMatcher from './createMatcher.js'
+import createMatcher from './create-matcher.js'
 class VueRouter{
     constructor(option){
         const {routes} = option

@@ -1,5 +1,4 @@
 export default function createRouterMap( routes, oldList=[], oldMap={}){
-    console.log()
     let pathList = oldList;
     let pathMap = oldMap;
     routes.forEach(route=>{
@@ -16,7 +15,7 @@ function addRouteRecord(router, pathList, pathMap,parentRecord){
         component:router.component,
         parent:parentRecord
     }
-    if(!pathMap[path] ){
+    if(!pathMap[path]){
         // 防止路有重复的, 不许覆盖,直接用于原来的
         pathMap[path] = record
         pathList.push(path)
