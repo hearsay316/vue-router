@@ -19,6 +19,9 @@ class VueRouter{
         }
 
     }
+    match(location){
+        return this.matcher.match(location)
+    }
     init(app){
         console.log(app)
         const history = this.history;
