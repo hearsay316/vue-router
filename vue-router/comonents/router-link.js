@@ -11,7 +11,6 @@ export default {
   },
   methods: {
     handleClickPush() {
-      console.log("5555", this.to, this);
       this.$router.push(this.to);
     },
   },

@@ -1,22 +1,15 @@
 <template>
-	<div>
-			home
-	</div>
+  <div>
+    home
+  </div>
 </template>
 
 <script>
-    export default {
-		name: "home",
-      create(){
-        console.log(this.$route,this.$route);
-      },
-      mounted(){
-        console.log(this.$route,this.$route);
-
-      }
-    }
+export default {
+  name: "home",
+  create() {},
+  mounted() {},
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

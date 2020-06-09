@@ -3,7 +3,6 @@ import { createRoute } from "./history/base";
 export default function createMatcher(routes) {
   let { pathList, pathMap } = createRouteMap(routes);
   function match(location) {
-    console.log(location, 111);
     let record = pathMap[location];
     return createRoute(record, {
       path: location,

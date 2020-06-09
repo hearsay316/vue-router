@@ -22,7 +22,6 @@ class VueRouter {
     return this.matcher.match(location);
   }
   init(app) {
-    console.log(app);
     const history = this.history;
     const setupHashListener = () => {
       history.setupListener();

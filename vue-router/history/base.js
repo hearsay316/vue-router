@@ -41,7 +41,6 @@ export default class History {
   // 获取路径匹配路径,当路径变化时候变 <router-view>
   transitionTo(location, complete) {
     let current = this.router.match(location);
-    console.log(current);
     // 匹配的资源和路径都是相同的,就不要再次跳转了
     if (
       this.current.path === location &&
@@ -51,7 +50,6 @@ export default class History {
     }
     // 调用钩子队列
     let queue = this.router.beforeHooks;
-    console.log(queue);
     const iterator = (hook, next) => {
       hook(current, this.current, next);
     };
