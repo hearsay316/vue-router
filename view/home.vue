@@ -6,7 +6,14 @@
 
 <script>
     export default {
-		name: "home"
+		name: "home",
+      create(){
+        console.log(this.$route,this.$route);
+      },
+      mounted(){
+        console.log(this.$route,this.$route);
+
+      }
     }
 </script>
 

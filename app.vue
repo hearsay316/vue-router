@@ -1,19 +1,14 @@
-<template xmlns="">
-	<div>
-		<router-link to="/">首页</router-link>
-		<router-link to="/about">关于</router-link>
-		
-		<router-view></router-view>
-	
-	</div>
+<template>
+  <div>
+    <router-link to="/">首页</router-link>
+    <router-link to="/about">关于</router-link>
+    <router-view> </router-view>
+  </div>
 </template>
-
 <script>
-    export default {
-        name:"app"
-    }
+export default {
+  name: "app",
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

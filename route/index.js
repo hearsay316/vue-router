@@ -9,7 +9,10 @@ let routes = [
         component: Home
     }, {
         path: '/about',
-        component: About
+        component: About,
+        children:[{
+            path: '', component: Home
+        }]
     }
 ]
 Vue.use(VueRouter)
